@@ -12,7 +12,7 @@ document.getElementById("contactform").addEventListener("submit", function(event
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.phone || !formData.detail) {
         alert("Iltimos, barcha maydonlarni to'ldiring.");
         return;
-    }
+    } 
 
     fetch('https://collegeproject1211.pythonanywhere.com/contactpage/', {
         method: 'POST', 

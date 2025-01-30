@@ -8,7 +8,7 @@ function closeSidebar() {
     document.getElementById("main-content").style.marginLeft = "0";
 }
 
-function saveData(section) {
+function saveData(section) { 
     const data = {
         title_uz: document.getElementById(`${section}-title-uz`).value,
         title_ru: document.getElementById(`${section}-title-ru`).value,

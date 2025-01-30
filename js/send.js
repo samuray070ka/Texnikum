@@ -113,7 +113,7 @@ document.querySelectorAll('.delete').forEach(button => {
         deleteData(id); // deleteData funksiyasini chaqiramiz
     });
 });
-
+ 
 // DELETE so'rovi orqali ma'lumotni o'chirish
 function deleteData(id) {
     const confirmation = confirm("Siz haqiqatdan ham ushbu ma'lumotni o'chirishni xohlaysizmi?");

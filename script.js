@@ -8,7 +8,7 @@ const userNameElement = document.getElementById('userName');
 // Backend API URL (odatda bu API endpoint bo'ladi)
 const apiUrl = 'https://supposedly-bold-ocelot.ngrok-free.app/login'; // Bu URLni backendga moslang
 
-// Login funksiyasi
+// Login funksiyasi 
 loginForm.addEventListener('submit', async (event) => {
     event.preventDefault(); // Bu xato berishi mumkin, agar passive listener bo'lsa
   

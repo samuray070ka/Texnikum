@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         populateBlog(data.blog);
         populatePartners(data.partners);
     }
-
+ 
     const setIdToLocalStoragee = (id) => {
         localStorage.setItem("id", id); 
     }
@@ -72,4 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
             location.reload(); // Reload the page to apply the new language
         });
     });
+    fetchData()
 });

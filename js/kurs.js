@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const courseContainer = document.getElementById('course-container');
             
-            // Get the active language from localStorage or fallback to 'uz'
+            // Get the active language from localStorage or fallback to 'uz' 
 
             // Clear the course container
             courseContainer.innerHTML = '';

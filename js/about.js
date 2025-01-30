@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
+ 
     // Handle language switching
     document.querySelectorAll('.language-switcher').forEach(item => {
         item.addEventListener('click', (e) => {
