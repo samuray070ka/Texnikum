@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       populateSlider(data.banner);
       populateAbout(data.about);
       populateHistory(data.our_history);
-      populateResults(data.results);
+    //   populateResults(data.results);
   }
 
   
@@ -120,25 +120,25 @@ function populateSlider(sliders) {
 }
 
 
-  // Function to populate results section
-  function populateResults(results) {
-      const resultsContainer = document.getElementById('results');
-      if (!resultsContainer) return;
+//   // Function to populate results section
+//   function populateResults(results) {
+//       const resultsContainer = document.getElementById('results');
+//       if (!resultsContainer) return;
 
-      results.forEach(result => {
-          const resultItem = document.createElement('div');
-          resultItem.className = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
-          const title = result.title ? result.title[currentLang] || result.title.uz : "";
-          resultItem.innerHTML = `
-              <div class="stat-wrap">
-                  <img class="nias" src="${result.icon_url}"></img>
-                  <p class="stat-count">${result.amount}</p>
-              </div>
-          `;
+//       results.forEach(result => {
+//           const resultItem = document.createElement('div');
+//           resultItem.className = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+//           const title = result.title ? result.title[currentLang] || result.title.uz : "";
+//           resultItem.innerHTML = `
+//               <div class="stat-wrap">
+//                   <img class="nias" src="${result.icon_url}"></img>
+//                   <p class="stat-count">${result.amount}</p>
+//               </div>
+//           `;
          
-          resultsContainer.appendChild(resultItem);
-      });
-  }
+//           resultsContainer.appendChild(resultItem);
+//       });
+//   }
 
   // Function to populate partners section
 
