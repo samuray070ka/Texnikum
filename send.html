@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <div class="flex">
+        <a class="home" href="./admin.html"><span>&lsaquo;</span> Orqaga</a>
+        <h3 class="send_h3">Oldingi kiritilgan ma'lumotlar</h3>
+    </div>
+    
+    <div class="send_main">
+        <div class="send_box" data-id="1">
+            <div class="left_box">
+                <img id="itemImage" src="./images/banner.jpg" alt="">
+            </div>
+            <div class="right_box">
+                <h3 id="title">Sarlavha</h3>
+                <p id="description">Ma'lumot tavsifi...</p>
+                <div class="sed">
+                    <button class="tahrir" onclick="openModal(1)">Tahrirlash</button>
+                    <button class="delete">O'chirish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="editModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Ma'lumotni tahrirlash</h2>
+            <br>
+            <input type="hidden" id="editId">
+            
+            <!-- Image input -->
+            <label for="editImage">Rasm:</label>
+            <input type="file" id="editImage" accept="image/*" onchange="previewImage(event)">
+            <img id="previewImage" src="" alt="Preview" style="max-width: 100px; display: none;">
+            <br>
+            <br>
+            
+            <!-- Title input -->
+            <label for="editTitle">Sarlavha:</label>
+            <input type="text" id="editTitle">
+            
+            <!-- Description input -->
+            <label for="editDescription">Tavsif:</label>
+            <textarea id="editDescription"></textarea>
+            
+            <!-- Save button -->
+            <button onclick="saveData()" class="save">Saqlash</button>
+        </div>
+    </div>
+
+    <script src="./js/send.js"></script>
+</body>
+</html>

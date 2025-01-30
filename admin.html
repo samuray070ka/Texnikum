@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texnikum-turizm</title>
+    <link rel="shortcut icon" href="https://xabar.uz/static/crop/2/0/920__95_2070776830.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <ul>
+            <li><a href="#banner">Banner</a></li>
+            <li><a href="#about">Biz Haqimizda</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#directions">Yo'nalishlar</a></li>
+            <li><a href="#news">Yangiliklar</a></li>
+            <li><a href="#events">Tadbirlar</a></li>
+            <li><a href="#leadership">Rahbaryat</a></li>
+            <li><a href="./send.html">Joylangan malumotlar</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
+        <div class="top">
+            <button class="open-btn" onclick="openSidebar()">☰</button>
+            <a class="hompage" href="./index.html">&#127968; Saytga qaytish</a>
+        </div>
+
+        <!-- Banner Section -->
+        <div id="banner" class="content-section">
+            <h1>Banner </h1>
+            <div class="input-container">
+                <label for="banner-title-uz">Sarlavha (UZ)</label>
+                <input type="text" id="banner-title-uz" class="input-field" placeholder="Sarlavha kiriting Uzbekcha">
+                <label for="banner-title-ru">Sarlavha (RU)</label>
+                <input type="text" id="banner-title-ru" class="input-field" placeholder="Sarlavha kiriting Ruscha">
+                <label for="banner-title-en">Sarlavha (EN)</label>
+                <input type="text" id="banner-title-en" class="input-field" placeholder="Sarlavha kiriting Inglishcha">
+
+                <label for="banner-desc-uz">Matn (UZ)</label>
+                <textarea id="banner-desc-uz" class="input-field" placeholder="Matn kiriting Uzbekcha"></textarea>
+                <label for="banner-desc-ru">Matn (RU)</label>
+                <textarea id="banner-desc-ru" class="input-field" placeholder="Matn kiriting Ruscha"></textarea>
+                <label for="banner-desc-en">Matn (EN)</label>
+                <textarea id="banner-desc-en" class="input-field" placeholder="Matn kiriting Inglishcha"></textarea>
+
+                <input type="file" id="banner-img" class="input-field">
+                <button class="btns" onclick="saveData('banner')">Saqlash</button>
+            </div>
+        </div>
+
+        <!-- Biz Haqimizda Section -->
+        <div id="about" class="content-section">
+            <h1>Biz Haqimizda</h1>
+            <div class="input-container">
+                <label for="about-title-uz">Sarlavha (UZ)</label>
+                <input type="text" id="about-title-uz" class="input-field" placeholder="Sarlavha kiriting Uzbekcha">
+                <label for="about-title-ru">Sarlavha (RU)</label>
+                <input type="text" id="about-title-ru" class="input-field" placeholder="Sarlavha kiriting Ruscha">
+                <label for="about-title-en">Sarlavha (EN)</label>
+                <input type="text" id="about-title-en" class="input-field" placeholder="Sarlavha kiriting Inglishcha">
+
+                <label for="about-desc-uz">Matn (UZ)</label>
+                <textarea id="about-desc-uz" class="input-field" placeholder="Matn kiriting Uzbekcha"></textarea>
+                <label for="about-desc-ru">Matn (RU)</label>
+                <textarea id="about-desc-ru" class="input-field" placeholder="Matn kiriting Ruscha"></textarea>
+                <label for="about-desc-en">Matn (EN)</label>
+                <textarea id="about-desc-en" class="input-field" placeholder="Matn kiriting Inglishcha"></textarea>
+
+                <input type="file" id="about-img" class="input-field">
+                <button class="btns" onclick="saveData('about')">Save</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="content-section">
+            <h1>Results</h1>
+            <div class="input-container">
+                <label for="results-img">Image</label>
+                <input type="file" id="results-img" class="input-field">
+                <label for="results-number">Number</label>
+                <input type="number" id="results-number" class="input-field" placeholder="Enter Number">
+                <button class="btns" onclick="saveData('results')">Save</button>
+            </div>
+        </div>
+
+        <!-- Yo'nalishlar Section -->
+        <div id="directions" class="content-section">
+            <h1>Yo'nalishlar</h1>
+            <div class="input-container">
+                <label for="directions-title-uz">Title (UZ)</label>
+                <input type="text" id="directions-title-uz" class="input-field" placeholder="Title in Uzbek">
+                <label for="directions-title-ru">Title (RU)</label>
+                <input type="text" id="directions-title-ru" class="input-field" placeholder="Title in Russian">
+                <label for="directions-title-en">Title (EN)</label>
+                <input type="text" id="directions-title-en" class="input-field" placeholder="Title in English">
+
+                <label for="directions-desc-uz">Description (UZ)</label>
+                <textarea id="directions-desc-uz" class="input-field" placeholder="Description in Uzbek"></textarea>
+                <label for="directions-desc-ru">Description (RU)</label>
+                <textarea id="directions-desc-ru" class="input-field" placeholder="Description in Russian"></textarea>
+                <label for="directions-desc-en">Description (EN)</label>
+                <textarea id="directions-desc-en" class="input-field" placeholder="Description in English"></textarea>
+
+                <input type="file" id="directions-img" class="input-field">
+                <button class="btns" onclick="saveData('directions')">Save</button>
+            </div>
+        </div>
+
+        <!-- Yangiliklar Section -->
+        <div id="news" class="content-section">
+            <h1>Yangiliklar</h1>
+            <div class="input-container">
+                <label for="news-title-uz">Title (UZ)</label>
+                <input type="text" id="news-title-uz" class="input-field" placeholder="Title in Uzbek">
+                <label for="news-title-ru">Title (RU)</label>
+                <input type="text" id="news-title-ru" class="input-field" placeholder="Title in Russian">
+                <label for="news-title-en">Title (EN)</label>
+                <input type="text" id="news-title-en" class="input-field" placeholder="Title in English">
+
+                <label for="news-desc-uz">Description (UZ)</label>
+                <textarea id="news-desc-uz" class="input-field" placeholder="Description in Uzbek"></textarea>
+                <label for="news-desc-ru">Description (RU)</label>
+                <textarea id="news-desc-ru" class="input-field" placeholder="Description in Russian"></textarea>
+                <label for="news-desc-en">Description (EN)</label>
+                <textarea id="news-desc-en" class="input-field" placeholder="Description in English"></textarea>
+
+                <input type="file" id="news-img" class="input-field">
+                <button class="btns" onclick="saveData('news')">Save</button>
+            </div>
+        </div>
+
+        <!-- Tadbirlar Section -->
+        <div id="events" class="content-section">
+            <h1>Tadbirlar</h1>
+            <div class="input-container">
+                <label for="events-media">Image/Video</label>
+                <input type="file" id="events-media" class="input-field">
+                <label for="events-title-uz">Title (UZ)</label>
+                <input type="text" id="events-title-uz" class="input-field" placeholder="Title in Uzbek">
+                <label for="events-title-ru">Title (RU)</label>
+                <input type="text" id="events-title-ru" class="input-field" placeholder="Title in Russian">
+                <label for="events-title-en">Title (EN)</label>
+                <input type="text" id="events-title-en" class="input-field" placeholder="Title in English">
+
+                <label for="events-desc-uz">Description (UZ)</label>
+                <textarea id="events-desc-uz" class="input-field" placeholder="Description in Uzbek"></textarea>
+                <label for="events-desc-ru">Description (RU)</label>
+                <textarea id="events-desc-ru" class="input-field" placeholder="Description in Russian"></textarea>
+                <label for="events-desc-en">Description (EN)</label>
+                <textarea id="events-desc-en" class="input-field" placeholder="Description in English"></textarea>
+
+                <button class="btns" onclick="saveData('events')">Save</button>
+            </div>
+        </div>
+
+        <!-- Rahbaryat Section -->
+        <div id="leadership" class="content-section">
+            <h1>Rahbaryat</h1>
+            <div class="input-container">
+                <label for="leadership-title-uz">Title (UZ)</label>
+                <input type="text" id="leadership-title-uz" class="input-field" placeholder="Title in Uzbek">
+                <label for="leadership-title-ru">Title (RU)</label>
+                <input type="text" id="leadership-title-ru" class="input-field" placeholder="Title in Russian">
+                <label for="leadership-title-en">Title (EN)</label>
+                <input type="text" id="leadership-title-en" class="input-field" placeholder="Title in English">
+
+                <label for="leadership-desc-uz">Description (UZ)</label>
+                <textarea id="leadership-desc-uz" class="input-field" placeholder="Description in Uzbek"></textarea>
+                <label for="leadership-desc-ru">Description (RU)</label>
+                <textarea id="leadership-desc-ru" class="input-field" placeholder="Description in Russian"></textarea>
+                <label for="leadership-desc-en">Description (EN)</label>
+                <textarea id="leadership-desc-en" class="input-field" placeholder="Description in English"></textarea>
+
+                <input type="file" id="leadership-img" class="input-field">
+                <button class="btns" onclick="saveData('leadership')">Save</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
