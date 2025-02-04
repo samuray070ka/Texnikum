@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://collegeproject1211.pythonanywhere.com/aboutpage/'; // Replace with your API endpoint
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
 
     // Get the default language from localStorage or fallback to 'uz'
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(apiUrl);
         const data = await response.json();
         populateAbout(data.about);
-        populatePartners(data.partners);
     }
 
     // Function to populate the About section
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutItem.className = 'about-item'; // Add a class for styling
             aboutItem.innerHTML = `
                  <div class="post-media wow fadeIn">
-                    <img src="${item.image_url}" alt="" class="img-fluid img-rounded">
+                    <img src="${item.img}" alt="" class="img-fluid img-rounded">
                 </div>
                 <div class="qw">
                     <h4>${item.title[currentLang] || item.title.uz}</h4>
@@ -40,21 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     // Function to populate partners section
-    function populatePartners(partners) {
-        const partnersContainer = document.getElementById('partners');
-        if (!partnersContainer) return;
-
-        partnersContainer.innerHTML = ''; // Clear previous content
-        partners.forEach(partner => {
-            const partnerItem = document.createElement('div');
-            partnerItem.className = 'col-lg-2 col-md-2 col-sm-4 col-xs-6';
-            partnerItem.innerHTML = `
-                <img src="${partner.icon_url}" alt="${partner.name[currentLang] || partner.name.uz}" class="img-fluid" style="width: 100px; height: 100px;">
-            `;
-            partnersContainer.appendChild(partnerItem);
-        });
-    }
-
     // Function to update static text on the page based on the language
     function updateStaticText() {
         document.querySelectorAll('[data-lang-uz]').forEach(element => {

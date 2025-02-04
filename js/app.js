@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const apiUrl = 'https://collegeproject1211.pythonanywhere.com/homepage/'; // Replace with your API endpoint
+  const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
   let currentLang = localStorage.getItem('selectedLang') || 'uz'; // Default language or saved language
   
   // Function to fetch data from the API
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       populateSlider(data.banner);
       populateAbout(data.about);
       populateHistory(data.our_history);
-    //   populateResults(data.results);
+      populateResults(data.results);
   }
 
   
@@ -36,7 +36,7 @@ function populateSlider(sliders) {
         const item = document.createElement('div');
         item.className = 'carousel-item';
         if (index === 0) item.classList.add('active');
-        item.style.backgroundImage = `url(${slider.image_url})`;
+        item.style.backgroundImage = `url(${slider.img})`;
         item.style.backgroundSize = 'cover';
         item.style.backgroundPosition = 'center';
         item.style.height = '100vh';
@@ -77,7 +77,7 @@ function populateSlider(sliders) {
         aboutItem.className = 'about-item'; // Add a class for styling
         aboutItem.innerHTML = `
          <div class="post-media wow fadeIn">
-                <img src="${item.image_url}" alt="" class="img-fluid img-rounded">
+                <img src="${item.img}" alt="" class="img-fluid img-rounded">
             </div>
              <div class="qw">
                     <h4>${item.title[currentLang] || item.title.uz}</h4>
@@ -108,7 +108,7 @@ function populateSlider(sliders) {
         historyItem.className = 'timeline__item swiper-slide';
         historyItem.innerHTML = `
             <div class="timeline__content">
-                <img src="${item.image_url}" alt="">
+                <img src="${item.img}" alt="">
                 <h2 class="jisad">${item.title[currentLang] || item.title.uz}</h2>
             <div class="hjs">
                  <p>${item.description[currentLang] || item.description.uz}</p>
@@ -120,25 +120,25 @@ function populateSlider(sliders) {
 }
 
 
-//   // Function to populate results section
-//   function populateResults(results) {
-//       const resultsContainer = document.getElementById('results');
-//       if (!resultsContainer) return;
+  // Function to populate results section
+  function populateResults(results) {
+      const resultsContainer = document.getElementById('results');
+      if (!resultsContainer) return;
 
-//       results.forEach(result => {
-//           const resultItem = document.createElement('div');
-//           resultItem.className = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
-//           const title = result.title ? result.title[currentLang] || result.title.uz : "";
-//           resultItem.innerHTML = `
-//               <div class="stat-wrap">
-//                   <img class="nias" src="${result.icon_url}"></img>
-//                   <p class="stat-count">${result.amount}</p>
-//               </div>
-//           `;
+      results.forEach(result => {
+          const resultItem = document.createElement('div');
+          resultItem.className = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+          const title = result.title ? result.title[currentLang] || result.title.uz : "";
+          resultItem.innerHTML = `
+              <div class="stat-wrap">
+                  <img class="nias" src="${result.img}"></img>
+                  <p class="stat-count">${result.number}</p>
+              </div>
+          `;
          
-//           resultsContainer.appendChild(resultItem);
-//       });
-//   }
+          resultsContainer.appendChild(resultItem);
+      });
+  }
 
   // Function to populate partners section
 
