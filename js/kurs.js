@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://collegeproject1211.pythonanywhere.com/coursepage/';
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/yonalishlar';
     let lang = localStorage.getItem('selectedLang') || 'uz'; // Default to 'uz' if no language is set
     // Function to fetch and display courses
     async function fetchAndDisplayCourses() {
@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             courseContainer.innerHTML = '';
 
             // Loop through the courses and populate the container
-            data.course.forEach(course => {
+            data.yonalish.forEach(course => {
                 const courseItem = document.createElement('div');
                 courseItem.className = 'col-lg-4 col-md-6 col-12';
                 courseItem.innerHTML = ` 
                     <div class="course-item">
                         <div class="image-blog">
-                            <img src="${course.image_url}" alt="" class="img-fluid">
+                            <img src="${course.img}" alt="" class="img-fluid">
                         </div>
                         <div class="course-br">
                             <div class="course-title">
-                                <h2><a href="#" title="">${course.name[[lang]] || course.name.uz}</a></h2>
+                                <h2><a href="#" title="">${course.title[[lang]] || course.title.uz}</a></h2>
                             </div>
                             <div class="course-desc">
                                 <p>${course.description[[lang]] || course.description.uz}</p>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiUrl = 'https://collegeproject1211.pythonanywhere.com/homepage/'; // Replace with your API endpoint
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/tadbirlar'; // Replace with your API endpoint
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
   
     // Function to fetch data from the API
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tadbirItem.className = 'tadbir_box';
             tadbirItem.innerHTML = `
                 <div class="tadbir_box_img">
-                    <img src="${item.image_url}" alt="">
+                    <img src="${item.img}" alt="">
                 </div>
                 <div class="tadbir_box_text">
                     <h1>${item.title[currentLang] || item.title.uz}</h1>
