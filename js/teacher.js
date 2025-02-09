@@ -1,23 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const teacherContainer = document.querySelector('#teachers .row');
+    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
 
     let lang = localStorage.getItem('selectedLang') || 'uz'; // Default to 'uz' if no language is set
 
     // Fetch teacher and partner data from the API
-    fetch('http://localhost:5001/texnikum-turizm/oqituvchilar') // Use the actual API endpoint for fetching data
+    fetch('http://localhost:5001/texnikum-turizm/home') // Use the actual API endpoint for fetching data
         .then(response => response.json())
         .then(data => {
             // Clear the existing content
             teacherContainer.innerHTML = '';
 
             // Display teachers
-            const teachers = data.teacher;
+            const teachers = data.leadership;
             teachers.forEach(teacher => {
                 const teacherCard = `
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="our-team">
                             <div class="team-img"> 
-                                <img src="${teacher.img}" alt="Teacher Image">
+                                <img src="${imageBaseUrl + teacher.img}" alt="Teacher Image">
                                 <div class="social">
                                 </div>
                             </div>

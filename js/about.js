@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
+    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
 
     // Get the default language from localStorage or fallback to 'uz'
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutItem.className = 'about-item'; // Add a class for styling
             aboutItem.innerHTML = `
                  <div class="post-media wow fadeIn">
-                    <img src="${item.img}" alt="" class="img-fluid img-rounded">
+                    <img src="${imageBaseUrl + item.img}" alt="" class="img-fluid img-rounded">
                 </div>
                 <div class="qw">
                     <h4>${item.title[currentLang] || item.title.uz}</h4>

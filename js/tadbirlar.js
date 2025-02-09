@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiUrl = 'http://localhost:5001/texnikum-turizm/tadbirlar'; // Replace with your API endpoint
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
+    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
   
     // Function to fetch data from the API
     async function fetchData() {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        populateTadbir(data.tadbir);
+        populateTadbir(data.events);
     }
 
     // Populate the 'tadbir' section with API data
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tadbirItem.className = 'tadbir_box';
             tadbirItem.innerHTML = `
                 <div class="tadbir_box_img">
-                    <img src="${item.img}" alt="">
+                    <img src="${imageBaseUrl + item.img}" alt="">
                 </div>
                 <div class="tadbir_box_text">
                     <h1>${item.title[currentLang] || item.title.uz}</h1>

@@ -732,6 +732,31 @@ a img.aligncenter {
 	line-height: 20px;
 	opacity: 1;
 }
+@media screen and (max-width:670px) {
+    .box-slider .carousel-control-prev{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .box-slider .carousel-control-next{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:590px) {
+    .jisa{
+        text-align: center;
+    }
+    .dsas{
+        text-align: center;
+    }
+}
+@media screen and (max-width:767px) {
+    .stat-wrap{
+        overflow: hidden;
+    }
+}
 
 .first-section .big-tagline a{
 	background: none;

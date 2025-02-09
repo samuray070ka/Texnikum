@@ -12,26 +12,29 @@ document.getElementById("contactform").addEventListener("submit", function(event
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.phone || !formData.detail) {
         alert("Iltimos, barcha maydonlarni to'ldiring.");
         return;
-    } 
-
-    fetch('https://collegeproject1211.pythonanywhere.com/contactpage/', {
-        method: 'POST', 
+    }
+    fetch('http://localhost:5001/texnikum-turizm/contact', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
     })
-    .then(response => response.json())  
+    .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        alert("Muofaqyatli royhatdan o'tdingiz!");
-        document.getElementById("contactform").reset();  
+        alert("Kiritgan ma'lumotlar muvaffaqiyatli yuborildi.");
+        document.getElementById("contactform").reset();
     })
     .catch((error) => {
         console.error('Error:', error);
-        alert('There was an error submitting the form');
+        alert('There was an error submitting the form: ' + error.message);
     });
+    
+    
+    
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
     

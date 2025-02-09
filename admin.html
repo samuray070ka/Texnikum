@@ -16,12 +16,13 @@
         <ul>
             <li><a href="#banner">Banner</a></li>
             <li><a href="#about">Biz Haqimizda</a></li>
+            <li><a href="#hamkor">Hamkorlar</a></li>
             <li><a href="#results">Results</a></li>
             <li><a href="#directions">Yo'nalishlar</a></li>
             <li><a href="#news">Yangiliklar</a></li>
             <li><a href="#events">Tadbirlar</a></li>
             <li><a href="#leadership">Rahbaryat</a></li>
-            <li><a href="./send.html">Joylangan malumotlar</a></li>
+            <!-- <li><a href="./send.html">Joylangan malumotlar</a></li> -->
         </ul>
     </div>
 
@@ -78,17 +79,40 @@
             </div>
         </div>
 
+
+        <div id="hamkor" class="content-section">
+            <h1>Hamkorlar</h1>
+            <div class="input-container">
+                <label for="our_history-title-uz">Sarlavha (UZ)</label>
+                <input type="text" id="our_history-title-uz" class="input-field" placeholder="Sarlavha kiriting Uzbekcha">
+                <label for="our_history-title-ru">Sarlavha (RU)</label>
+                <input type="text" id="our_history-title-ru" class="input-field" placeholder="Sarlavha kiriting Ruscha">
+                <label for="our_history-title-en">Sarlavha (EN)</label>
+                <input type="text" id="our_history-title-en" class="input-field" placeholder="Sarlavha kiriting Inglishcha">
+
+                <label for="our_history-desc-uz">Matn (UZ)</label>
+                <textarea id="our_history-desc-uz" class="input-field" placeholder="Matn kiriting Uzbekcha"></textarea>
+                <label for="our_history-desc-ru">Matn (RU)</label>
+                <textarea id="our_history-desc-ru" class="input-field" placeholder="Matn kiriting Ruscha"></textarea>
+                <label for="our_history-desc-en">Matn (EN)</label>
+                <textarea id="our_history-desc-en" class="input-field" placeholder="Matn kiriting Inglishcha"></textarea>
+
+                <input type="file" id="our_history-img" class="input-field">
+                <button class="btns" onclick="saveData('our_history')">Saqlash</button>
+            </div>
+        </div>
+
         <!-- Results Section -->
-        <!-- <div id="results" class="content-section">
+        <div id="results" class="content-section">
             <h1>Results</h1>
             <div class="input-container">
-                <label for="results-img">Image</label>
+                <label for="results-img">Rasm</label>
                 <input type="file" id="results-img" class="input-field">
-                <label for="results-number">Number</label>
+                <label for="results-number">Raqam</label>
                 <input type="number" id="results-number" class="input-field" placeholder="Enter Number">
-                <button class="btns" onclick="saveData('results')">Save</button>
+                <button class="btns" onclick="saveData('results')">Saqlash</button>
             </div>
-        </div> -->
+        </div>
 
         <!-- Yo'nalishlar Section -->
         <div id="directions" class="content-section">
@@ -109,7 +133,7 @@
                 <textarea id="directions-desc-en" class="input-field" placeholder="Description in English"></textarea>
 
                 <input type="file" id="directions-img" class="input-field">
-                <button class="btns" onclick="saveData('directions')">Save</button>
+                <button class="btns" onclick="saveData('directions')">Saqlash</button>
             </div>
         </div>
 
@@ -132,7 +156,7 @@
                 <textarea id="news-desc-en" class="input-field" placeholder="Description in English"></textarea>
 
                 <input type="file" id="news-img" class="input-field">
-                <button class="btns" onclick="saveData('news')">Save</button>
+                <button class="btns" onclick="saveData('news')">Saqlash</button>
             </div>
         </div>
 
@@ -141,7 +165,7 @@
             <h1>Tadbirlar</h1>
             <div class="input-container">
                 <label for="events-media">Image/Video</label>
-                <input type="file" id="events-media" class="input-field">
+                <input type="file" id="events-img" class="input-field">
                 <label for="events-title-uz">Title (UZ)</label>
                 <input type="text" id="events-title-uz" class="input-field" placeholder="Title in Uzbek">
                 <label for="events-title-ru">Title (RU)</label>
@@ -156,7 +180,7 @@
                 <label for="events-desc-en">Description (EN)</label>
                 <textarea id="events-desc-en" class="input-field" placeholder="Description in English"></textarea>
 
-                <button class="btns" onclick="saveData('events')">Save</button>
+                <button class="btns" onclick="saveData('events')">Saqlash</button>
             </div>
         </div>
 
@@ -164,22 +188,14 @@
         <div id="leadership" class="content-section">
             <h1>Rahbaryat</h1>
             <div class="input-container">
-                <label for="leadership-title-uz">Title (UZ)</label>
-                <input type="text" id="leadership-title-uz" class="input-field" placeholder="Title in Uzbek">
-                <label for="leadership-title-ru">Title (RU)</label>
-                <input type="text" id="leadership-title-ru" class="input-field" placeholder="Title in Russian">
-                <label for="leadership-title-en">Title (EN)</label>
-                <input type="text" id="leadership-title-en" class="input-field" placeholder="Title in English">
+                <label for="leaderships">Ism</label>
+                <input type="text" id="leaderships-name" class="input-field" placeholder="Ism kiriting">
 
-                <label for="leadership-desc-uz">Description (UZ)</label>
-                <textarea id="leadership-desc-uz" class="input-field" placeholder="Description in Uzbek"></textarea>
-                <label for="leadership-desc-ru">Description (RU)</label>
-                <textarea id="leadership-desc-ru" class="input-field" placeholder="Description in Russian"></textarea>
-                <label for="leadership-desc-en">Description (EN)</label>
-                <textarea id="leadership-desc-en" class="input-field" placeholder="Description in English"></textarea>
+                <label for="leaderships">Yo'nalishingiz</label>
+                <textarea id="leaderships-direction" class="input-field" placeholder="Yo'nalishingizni kiriting"></textarea>
 
-                <input type="file" id="leadership-img" class="input-field">
-                <button class="btns" onclick="saveData('leadership')">Save</button>
+                <input type="file" id="leaderships-img" class="input-field">
+                <button class="btns" onclick="saveData('leaderships')">Saqlash</button>
             </div>
         </div>
 

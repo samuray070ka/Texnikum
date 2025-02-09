@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'http://localhost:5001/texnikum-turizm/yonalishlar';
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/home';
     let lang = localStorage.getItem('selectedLang') || 'uz'; // Default to 'uz' if no language is set
+    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
+
     // Function to fetch and display courses
     async function fetchAndDisplayCourses() {
         try {
@@ -15,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
             courseContainer.innerHTML = '';
 
             // Loop through the courses and populate the container
-            data.yonalish.forEach(course => {
+            data.directions.forEach(course => {
                 const courseItem = document.createElement('div');
                 courseItem.className = 'col-lg-4 col-md-6 col-12';
                 courseItem.innerHTML = ` 
                     <div class="course-item">
                         <div class="image-blog">
-                            <img src="${course.img}" alt="" class="img-fluid">
+                            <img src="${imageBaseUrl + course.img}" alt="img" class="img-fluid">
                         </div>
                         <div class="course-br">
                             <div class="course-title">

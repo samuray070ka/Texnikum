@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'http://localhost:5001/texnikum-turizm/yangiliklar'; // Replace with your API endpoint
+    const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
+    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
     
     // Check if a language is stored in localStorage, otherwise default to 'uz'
     let currentLang = localStorage.getItem('selectedLang') || 'uz'; 
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function fetchData() {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        populateBlog(data.yangilik);
+        populateBlog(data.news);
     }
  
     // const setIdToLocalStoragee = (id) => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             blogItem.innerHTML = `
                 <div class="blog-item">
                     <div class="image-blog">
-                        <img src="${item.img}" alt="" class="img-fluid">
+                        <img src="${imageBaseUrl + item.img}" alt="" class="img-fluid">
                     </div>
                     <div class="meta-info-blog">
                         <span><i class="fa fa-calendar"></i> <a href="#">${new Date(item.created_at).toLocaleDateString()}</a></span>
