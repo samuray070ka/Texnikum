@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(apiUrl);
         const data = await response.json();
         populateBlog(data.news);
+        
     }
  
     // const setIdToLocalStoragee = (id) => {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <img src="${imageBaseUrl + item.img}" alt="" class="img-fluid">
                     </div>
                     <div class="meta-info-blog">
-                        <span><i class="fa fa-calendar"></i> <a href="#">${new Date(item.created_at).toLocaleDateString()}</a></span>
+                        <span><i class="fa fa-calendar"></i> <a href="#"></a></span>
                     </div>
                     <div class="blog-title">
                         <h2><a title="">${item.title[currentLang] || item.title.uz}</a></h2>
