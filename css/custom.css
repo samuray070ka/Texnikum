@@ -529,3 +529,6 @@ html {
     min-height: 40vh;
     background-color: #eee;
 }
+.timeline__content img{
+    height: 500px;
+}
