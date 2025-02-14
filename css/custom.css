@@ -532,3 +532,24 @@ html {
 .timeline__content img{
     height: 500px;
 }
+.dfs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+.our-team{
+    width: 33%;
+}
+.our-team .team-img img{
+    height: 350px;
+}
+.our-team .team-content h3{
+    font-size: 18px;
+}
+.logog{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+}
