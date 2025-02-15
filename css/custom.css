@@ -553,3 +553,14 @@ html {
     height: 90px;
     margin-left: 20px;
 }
+@media screen and (max-width: 1000px) {
+    .our-team{
+        width: 49%;
+    }
+    
+}
+@media screen and (max-width: 575px) {
+    .our-team{
+        width: 100%;
+    }
+}
