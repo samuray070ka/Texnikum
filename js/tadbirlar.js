@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; // Replace with your API endpoint
+    const apiUrl = 'https://texnikum-turizm-api.onrender.com/texnikum-turizm/home'; // Replace with your API endpoint
     let currentLang = localStorage.getItem('selectedLang') || 'uz';
-    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
+    const imageBaseUrl = `https://texnikum-turizm-api.onrender.com/uploads/`; // Backenddagi rasm joylashuvi
   
     // Function to fetch data from the API
     async function fetchData() {

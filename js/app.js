@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'http://localhost:5001/texnikum-turizm/home'; 
+    const apiUrl = 'https://texnikum-turizm-api.onrender.com/texnikum-turizm/home'; 
     let currentLang = localStorage.getItem('selectedLang') || 'uz'; 
-    const imageBaseUrl = `http://localhost:5001/uploads/`; // Backenddagi rasm joylashuvi
+    const imageBaseUrl = `https://texnikum-turizm-api.onrender.com/uploads/`; // Backenddagi rasm joylashuvi
 
     async function fetchData() {
         try {
