@@ -244,10 +244,15 @@ body.host_version .stat-wrap p {
     font-size: 38px;
     font-weight: 600;
     line-height: 1.3;
-    margin: 0;
     padding: 13px 0 0;
+    width: 115%;
 }
-
+@media screen and (max-width: 575px) {
+    body.host_version .stat-wrap p {
+        width: 100%;
+    }
+    
+}
 body.host_version .icon_wrap {
     font-size: 62px;
 }
