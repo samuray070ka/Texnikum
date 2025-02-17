@@ -4,7 +4,7 @@ const passwordInput = document.getElementById('password');
 const userNameElement = document.getElementById('userName'); 
 
 // Backend API URL (odatda bu API endpoint bo'ladi)
-const apiUrl = 'https://texnikum-turizm-api.onrender.com/login'; // Bu URLni backendga moslang
+const apiUrl = 'https://texnikum-api.onrender.com/login'; // Bu URLni backendga moslang
 
 // Login funksiyasi 
 loginForm.addEventListener('submit', async (event) => {

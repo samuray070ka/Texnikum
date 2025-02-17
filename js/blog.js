@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://texnikum-turizm-api.onrender.com/texnikum-turizm/home'; // Replace with your API endpoint
-    const imageBaseUrl = `https://texnikum-turizm-api.onrender.com/uploads/`; // Backenddagi rasm joylashuvi
+    const apiUrl = 'https://texnikum-api.onrender.com/texnikum-turizm/home'; // Replace with your API endpoint
+    const imageBaseUrl = `https://texnikum-api.onrender.com/uploads/`; // Backenddagi rasm joylashuvi
     
     // Check if a language is stored in localStorage, otherwise default to 'uz'
     let currentLang = localStorage.getItem('selectedLang') || 'uz'; 
