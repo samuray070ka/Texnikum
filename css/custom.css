@@ -567,6 +567,6 @@ html {
 .nias{
     border-radius: 6px;
 }
-.stat-count{
-    margin-left: 100px;
+.stat-wrap p{
+    margin-left: 10px;
 }
