@@ -34,7 +34,7 @@ function saveData(section) {
         formData.append('img', imgInput.files[0]);
     }
 
-    fetch('http://localhost:5001/admin', {
+    fetch('https://texnikum-api.onrender.com/admin', {
         method: 'POST',
         body: formData
         
