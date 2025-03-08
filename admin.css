@@ -8,7 +8,7 @@ body {
     font-family: monospace;
 }
 
-.sidebar {
+.sidebar { 
     position: fixed;
     left: 0;
     top: 0;
@@ -142,15 +142,8 @@ body {
     color: white;
     border: 1px solid #fff;
 }
-@media (max-width: 675px) {
-    .sidebar{
-        /* display: block; */
-    }
-}
-
-
 .send_h3{
-    text-align: center;
+    text-align: center;   
     padding: 20px 0;
     font-size: 30px;
     font-weight: 900;
